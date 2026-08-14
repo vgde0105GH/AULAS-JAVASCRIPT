@@ -1,59 +1,23 @@
-function StartCalculator() 
-{
-    let num1 = Number(prompt("Digite o primeiro número:"));
-    let operator = prompt("Digite o operador (+, -, *, /):");
-    let num2 = Number(prompt("Digite o segundo número:"));
+function classifyNumbers(numbers) {
+    const result = [];
 
-    let result = calculate(num1, num2, operator);
-    alert("O resultado é: " + result);
+    for (let i = 0; i < numbers.length; i++) {
+        const number = numbers[i];
+
+        if (number % 5 === 0) {
+            result.push("DivisibleBy5");
+        } else if (number % 2 === 0) {
+            result.push("Even");
+        } else {
+            result.push("Odd");
+        }
+    }
+
+    return result;
 }
 
-function calculate(num1, num2, operator)
-{
-    if (operator === "+")
-    {
-        return add(num1, num2);
-    }
-    else if (operator === "-")
-    {
-        return subtract(num1, num2);
-    }
-    else if (operator === "*")
-    {
-        return multiply(num1, num2);
-    }
-    else if (operator === "/")
-    {
-        return divide(num1, num2);
-    }
-    else 
-    {
-        return "Operador inválido!";
-    }
-}
+const numbers = [10, 15, 22, 33, 40];
 
-function add(num1, num2)
-{
-    return num1 + num2;
-}
+const classifiedNumbers = classifyNumbers(numbers);
 
-function subtract(num1, num2)
-{
-    return num1 - num2;
-}
-
-function multiply(num1, num2)
-{
-    return num1 * num2;
-}
-
-function divide(num1, num2)
-{
-    if (num2 === 0)
-    {
-        return "Erro: Divisão por zero não existe!";
-    }
-    return num1 / num2;
-}
-
-StartCalculator();
+console.log(classifiedNumbers);

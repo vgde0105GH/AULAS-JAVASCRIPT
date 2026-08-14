@@ -1,0 +1,548 @@
+EXERCICIOS JAVASCRIPT !:
+
+1 - Fazendo uso de template string, e duas variaveis,
+(nome, sobrenome) escreva no console seu nome completo
+
+Código:
+const nome = "Anderson"
+const sobrenome = "Keller"
+
+const nomecompleto = `Meu nome é ${nome} ${sobrenome}`
+
+console.log(nomecompleto)
+
+2 - usando pelo menos uma variavel para o ano de nascimento,
+exiba sua idade
+
+Código:
+const anonascimento = 2010
+const idade = 2026 - anonascimento
+const texto = `Minha idade é ${idade}`
+console.log(texto)
+
+3 - dado um numero qualquer, que seja recebido na variavel,
+imprima se o numero é par ou impar
+
+Código:
+const numero = 11
+const par = numero %2 == 0
+if(par){
+    console.log(`${numero} é par`)
+}else{
+    console.log(`${numero} é impar`)
+}
+
+4 - dado um valor de um produto, quero que seja informado o
+valor desse produto com 10% desconto
+
+Código:
+const valorproduto = 1000
+const valorcomdesconto = valorproduto * 0.9
+console.log(`Valor do produto com 10% de desconto é ${valorcomdesconto}`)
+
+Exercícios Java Script 2:
+
+- usando prompt e alert
+
+1 - quero um algoritmo que receba o preço de um produto, e o percentual de desconto
+ - exiba ao final, o valor do desconto
+
+Código:
+ const valorproduto = parseInt(prompt("Digite o valor do produto"))
+ const desconto = parseInt(prompt("Digite o percentual de desconto"))
+
+ const resultado = valorproduto*(desconto/100)
+ alert(`Valor do desconto é ${resultado}`)
+
+2 - um algoritmo que calcula o IMC
+ - consultar formula do IMC
+ - exibir o resultado de acordo com o IMC
+ Categoria de peso
+(IMC)
+Normal* (≥ 18,5 e < 25)
+
+Sobrepeso (≥ 25 e < 30)
+
+Obesos: Classe I (≥ 30 e < 35)
+
+Obesos: Classe II (≥ 35 e < 40)
+
+Obesos: classe III (≥ 40)
+
+Código:
+ const altura = parseInt(prompt("Digite sua altura (em cm)"))
+ const peso = parseInt(prompt("Digite o peso"))
+
+ const alturaformatada = altura/100
+ const imc = (peso / (alturaformatada*alturaformatada)).toFixed(2)
+12.192873198273981273
+ const imcformatado = imc.toFixed(2)
+ if(imc>=40){
+     alert(`${imc} :Classe III`)
+ }else if(imc>=35){
+     alert(`${imc} :Classe II`)
+ }else if(imc >=30){
+     alert(`${imc} :Classe I`)
+ }else if(imc>=25){
+     alert(`${imc} :Sobrepeso`)
+ }else{
+     alert(`${imc} :Normal`)
+ }
+
+3 - faça um algoritmo que leia um numero, exiba se ele é par ou impar,
+ou multiplo de 3 ou multiplo de 5 ou de nenhum deles. ou todos.
+
+Código:
+const numero = parseInt(prompt("Digite um numero"))
+//15
+const par = numero % 2 == 0
+const multiplo_tres = numero % 3 == 0
+const multiplo_cinco = numero % 5 == 0
+
+let texto = ""
+if(par){
+    texto += "é par "
+}else{
+    texto += "é impar "
+}
+if(multiplo_tres){
+    texto += "é multiplo de 3 "
+}
+if(multiplo_cinco){
+    texto += "é multiplo de 5"
+}
+alert(`${numero}: Número ${texto}`)
+
+Exercícios Java Script 3:
+
+- USANDO O LOOP FOR
+
+Receber uma palavra qualquer em uma variavel,
+- deve retornar a palavra invertida
+- usando FOR
+
+Código:
+console.log("partte 3")
+const palavra = prompt("Digite uma palavra")
+
+let palavra_invertida = ""
+for(let i = palavra.length-1; i>=0; i--){
+  palavra_invertida += palavra[i]
+}
+
+alert(palavra_invertida)
+
+Exercícios Java Script 4:
+
+1 - DESENVOLVA UM ALGORITMO QUE SIMULE UM EMPRÉSTIMO
+  - O USUÁRIO DEVE INSERIR O VALOR DESEJADO DE EMPRÉSTIMO
+  - O NÚMERO DE PARCELAS
+  - OS JUROS EM CADA PARCELA
+-OBS: OS JUROS MENSAIS NÃO PODEM SER MENOR DO QUE 5% AO MÊS
+- NO FINAL VOCÊ DEVE EXIBIR:
+  - VALOR FINAL DO EMPRÉSTIMO COM OS JUROS
+  - VALOR DE CADA PARCELA COM OS JUROS
+  - NÚMERO DE PARCELAS
+
+Código:
+// const valordesejado = parseInt(prompt("Digite o valor que você quer"))
+// const numero_parcelas = parseInt(prompt("Quantas parcelas?"))
+// const juros_mensais = parseInt(prompt("Digite o valor do juros mensal"))
+// if(juros_mensais<5){
+//     alert("Juros não podem ser menor que 5%")
+// }else{
+ 
+//     const valor_parcela = valordesejado / numero_parcelas
+//     const valor_juros = valor_parcela * juros_mensais/100
+//     const valor_parcela_com_juros = valor_parcela + valor_juros
+//     const valor_final = valor_parcela_com_juros * numero_parcelas
+//     alert(`Valor da parcela ${valor\_parcela\_com\_juros}, Valor total: ${valor\_final}, em ${numero\_parcelas} vezes`)
+// }
+
+2 - DESENVOLVA UM ALGORIMTO QUE RECEBE UMA PALAVRA DIGITADA PELO USUÁRIO
+    - VOCÊ DEVE EXIBIR AO FINAL:
+      - TAMANHO DA PALAVRA
+      - NÚMERO DE VOGAIS
+      - PALAVRA INVERTIDA
+
+Código:
+// const palavra = prompt("Digite uma palavra")
+// let palavra_invertida = ""
+// const tamanho_palavra = palavra.length
+// let contador_vogais = 0
+// for(let i = tamanho_palavra-1;i>=0; i-- ){
+//     palavra_invertida += palavra[i]
+//     "A"
+//     if(palavra[i].toLowerCase() == "a" || palavra[i].toLowerCase()=="e"
+//         || palavra[i].toLowerCase()=="i" || palavra[i].toLowerCase()=="o"
+//             || palavra[i].toLowerCase()=="u"
+//             ){
+//         contador_vogais++
+//     }
+// }
+// alert(`Palavra invertida: ${palavra\_invertida}, tamanho: ${tamanho\_palavra}, numero de vogais: ${contador\_vogais}`)
+
+3 - DESENVOLVA UM ALGORITMO QUE RECEBA UMA FRASE
+ - AO FINAL A FRASE DEVE FICAR FORMATADA DA SEGUINTE FORMATADA
+    "AmAnHã é sExTa-fEiRa, CoIsA BoA"
+
+Código:
+// const palavra = prompt("Digite algo")
+// let palavra_formatada = ""
+// for(let i= 0;i<palavra.length;i++){
+ 
+//     if(i % 2 == 0){
+//         palavra_formatada += palavra[i].toUpperCase()
+//     }else{
+//         palavra_formatada += palavra[i].toLowerCase()
+//     }
+
+// }
+// alert(palavra_formatada)
+
+Exercícios Java Script 5:
+
+USANDO LITSA - ARRAY
+
+1 - DADO UM ARRAY DE NÚMEROS QUALQUER,
+    - RETORNE UM NOVO ARRAY COM OS VALORES MULTIPLICADOS PELO INDEX
+
+Código:
+// const numeros = [45,5,6,90,567,2,3]
+// const resultado = []
+
+// for(let i =0; i < numeros.length; i++){
+//     resultado.push(numeros[i] * i)
+// }
+// console.log(resultado,'resultado')
+
+2 - DADO UM ARRAY DE PALAVRAS QUALQUER,
+    - RETORNE UM NOVO ARRAY COM A ORDEM DOS NOMES AO CONTRARIO
+    - USANDO FOR
+
+Código:
+// const nomes = ["João","Maria",'Pedro',"Arthur"]
+// const invertidos = []
+// for(let i = nomes.length-1; i>=0;i--){
+//     invertidos.push(nomes[i])
+// }
+// console.log(invertidos,'invertidos')
+
+3 - DADO UM ARRAY DE PALAVRAS QUALQUER
+    - RETORNE UM NOVO ARRAY COM AS PALAVRAS QUE COMEÇAM COM A LETRA "a"
+    - SE NÃO HOUVER NEHUMA, RETORNE UM ARRAY VAZIO
+
+Código:
+// const palavras = ['banana','abacaxi','marrocos']
+// const iniciam_com_a = []
+
+// for(let i = 0; i <palavras.length; i++){
+//     const palavra_atual = palavras[i]
+//     if(palavra_atual[0] == "a" ){
+//         iniciam_com_a.push(palavra_atual)
+//     }
+// }
+// console.log(iniciam_com_a,'iniciam com a')
+
+4 - DADO UM ARRAY DE NUMEROS QUALQUER
+    - RETORNE UM NOVO ARRAY, NO SEGUINTE FORMATO,
+    - SE NUMERO IMPAR - "impar"
+    - SE NUMERO PAR - "par"
+    - SE NUMERO MULTIPLO DE 5 - "xazam"
+
+Código:
+// const numeros = [1,2,3,5,6,10,15,18,20]
+// const resultado = []
+// for(let i =0;i<numeros.length;i++){
+//     if(numeros[i] % 5 == 0){
+//         resultado.push("xazam")
+//     }else if(numeros[i]%2==0){
+//         resultado.push("par")
+//     }else {
+//         resultado.push("impar")
+//     }
+// }
+// // console.log(numeros,'numeros')
+// // console.log(resultado,'resultado')
+
+5 - DADO UM ARRAY DE NUMEROS QUALQUER
+    - RETORNE A SOMA DE TODOS OS NUMEROS
+
+Código:
+// const numeros_soma = [1,2,3,4,5,10]
+// let total = 0
+// for(let i =0;i<numeros_soma.length;i++){
+//     total += numeros_soma[i]
+// }
+// console.log(numeros_soma)
+// console.log(total,'total')
+
+6 - DADO UM ARRAY DE NUMEROS QUALQUER
+    - RETORNE UM ARRAY COM OS NUMEROS PARES
+
+Código:
+const numeros = [3,4,5,7,9]
+const pares = []
+for(let i =0;i<numeros.length;i++){
+    if(numeros[i]%2==0){
+        pares.push(numeros[i])
+    }
+}
+console.log(pares)
+
+Exercícios Java Script 6:
+
+USANDO LITSA - ARRAY E FOR
+
+1 - FAÇA UM ALGORITMO QUE RECEBA UMA PALAVRA, OU FRASE
+    - RETORNE ELA EM UM LISTA, SEPARADA POR LETRAS
+    - EXEMPLO
+        -> ENTRADA = "Palavra"
+        -> SAIDA = ["P",'a','l','a','v','r','a']
+
+Código:
+const palavra = "amanha é sexta, maravilha, Anderson"
+const resultado = []
+for(let i =0; i<palavra.length;i++){
+    resultado.push(palavra[i])
+
+2 - FAÇA UM ALGORITMO QUE RECEBA UM ARRAY DE PALAVRAS
+    - RETORNE AS PALAVRAS EM UMA STRING, OBEDECENDO OS ESPAÇOS ENTRE AS PALAVRAS
+    - EXEMPLO
+        -> ENTRADA = ['Amanhã','sexta','feira','feriado']
+        -> SAIDA = "Amanhã sexta feira feriado"
+
+Código:
+const palavras = ["Anderson", "Sexta-feira","Futebol"]
+let texto = ""
+for(let i = 0;i<palavras.length;i++){
+    texto += `${palavras\[i]} `
+}
+// console.log(palavras)
+// console.log(texto)
+
+3 - FAÇA UM ALGORITMO QUE RECEBA UM ARRAY DE NUMEROS
+    - RETORNE DOIS NUMEROS, O MAIOR E O MENOR ENTRE ELES
+    - EXEMPLO
+       -> ENTRADA = [0,3,4,6,7,9]
+       -> SAIDA = [0,9]
+
+Código:
+const numeros = [0,9,8,890,14,7]
+let resultado_numeros = []
+let maior =0
+let menor =numeros[0]
+for(let i=0;i<numeros.length;i++){
+    if(numeros[i] > maior){
+        maior = numeros[i]
+ 
+    }
+    if(numeros[i] < menor){
+        menor = numeros[i]
+        menor = 9
+    }
+    resultado_numeros = [menor,maior]
+}
+console.log(numeros)
+console.log(resultado_numeros)
+
+
+
+
+
+EXERCICIOS JAVASCRIPT 2:
+FUNÇÕES
+
+1. CALCULADORA
+ - capturar 2 numeros do usuário e o operador matemático (+, -, *, / )
+ - exibir o resultado esperado
+ - precisa ter uma função inicial - chamam os prompts
+ - as contas devem ser feitas com FUNÇÕES
+
+ Código:
+function StartCalculator() 
+{
+    let num1 = Number(prompt("Digite o primeiro número:"));
+    let operator = prompt("Digite o operador (+, -, *, /):");
+    let num2 = Number(prompt("Digite o segundo número:"));
+
+    let result = calculate(num1, num2, operator);
+    alert("O resultado é: " + result);
+}
+
+function calculate(num1, num2, operator)
+{
+    if (operator === "+")
+    {
+        return add(num1, num2);
+    }
+    else if (operator === "-")
+    {
+        return subtract(num1, num2);
+    }
+    else if (operator === "*")
+    {
+        return multiply(num1, num2);
+    }
+    else if (operator === "/")
+    {
+        return divide(num1, num2);
+    }
+    else 
+    {
+        return "Operador inválido!";
+    }
+}
+
+function add(num1, num2)
+{
+    return num1 + num2;
+}
+
+function subtract(num1, num2)
+{
+    return num1 - num2;
+}
+
+function multiply(num1, num2)
+{
+    return num1 * num2;
+}
+
+function divide(num1, num2)
+{
+    if (num2 === 0)
+    {
+        return "Erro: Divisão por zero não existe!";
+    }
+    return num1 / num2;
+}
+
+StartCalculator();
+
+2.EXERCICIOS FUNÇÕES:
+USANDO LITSA - ARRAY
+COM FUNÇÕES
+
+1 - DADO UM ARRAY DE NÚMEROS QUALQUER, 
+    - RETORNE UM NOVO ARRAY COM OS VALORES MULTIPLICADOS PELO INDEX
+
+Código:
+function MultiplyByIndex(array)
+{
+{
+    return array.map((value, index) => value * index)
+}
+const numbers = [10, 20, 30, 40, 50];
+const result = MultiplyByIndex(numbers);
+}
+console.log(result);
+
+2 - DADO UM ARRAY DE PALAVRAS QUALQUER,
+    - RETORNE UM NOVO ARRAY COM A ORDEM DOS NOMES AO CONTRARIO
+    - USANDO FOR
+
+Código:
+function invertedorder(names)
+{
+    const newArray = [];
+    for (let i = names.length - 1; i >= 0; i--)
+    {
+        newArray.push(names[i]);
+    }
+    return newArray;
+}
+const names = ["Alice", "Bob", "Charlie", "David"];
+const result = invertedorder(names);
+console.log(result);
+console.log(names);
+
+3 - DADO UM ARRAY DE PALAVRAS QUALQUER
+    - RETORNE UM NOVO ARRAY COM AS PALAVRAS QUE COMEÇAM COM A LETRA "a"
+    - SE NÃO HOUVER NEHUMA, RETORNE UM ARRAY VAZIO
+
+Código:
+function WordsWithE(words)
+{
+    const result = [];
+    for (let i = 0; i < words.length; i++)
+    {
+        if (words[i].toLowerCase().includes('e'))
+        {
+            result.push(words[i]);
+        }
+    }
+    return result;
+}
+const wordsArray = ['apple', 'banana', 'cherry', 'date', 'fig', 'grape', 'kiwi', 'lemon', 'mango', 'nectarine'];
+const filteredWords = WordsWithE(wordsArray);
+console.log(filteredWords);
+
+4 - DADO UM ARRAY DE NUMEROS QUALQUER
+    - RETORNE UM NOVO ARRAY, NO SEGUINTE FORMATO,
+    - SE NUMERO IMPAR - "impar"
+    - SE NUMERO PAR - "par"
+    - SE NUMERO MULTIPLO DE 5 - "xazam"
+
+Código:
+function classifyNumbers(numbers) {
+    const result = [];
+
+    for (let i = 0; i < numbers.length; i++) {
+        const number = numbers[i];
+
+        if (number % 5 === 0) {
+            result.push("DivisibleBy5");
+        } else if (number % 2 === 0) {
+            result.push("Even");
+        } else {
+            result.push("Odd");
+        }
+    }
+
+    return result;
+}
+
+const numbers = [10, 15, 22, 33, 40];
+
+const classifiedNumbers = classifyNumbers(numbers);
+
+console.log(classifiedNumbers);
+
+5 - DADO UM ARRAY DE NUMEROS QUALQUER
+    - RETORNE A SOMA DE TODOS OS NUMEROS
+
+Código:
+function AddNumbers(numbers)
+{
+    let addition = 0;
+    for (let i = 0; i < numbers.length; i++)
+    {
+        addition += numbers[i];
+    }
+    return addition;
+}
+const numbers = [10, 20, 30, 40, 50];
+const result = AddNumbers(numbers);
+console.log(result);
+
+6 - DADO UM ARRAY DE NUMEROS QUALQUER
+    - RETORNE UM ARRAY COM OS NUMEROS PARES 
+
+Código:
+function FindPairs(numbers)
+{
+    const pairs = [];
+    for (let i = 0; i < numbers.length; i++)
+    {
+        if (numbers[i] % 2 === 0)
+        {
+            pairs.push(numbers[i]);
+        }
+    }
+    return pairs;
+}
+
+const numbers = [1, 2, 3, 4, 5, 6];
+const result = FindPairs(numbers);
+console.log(result);
