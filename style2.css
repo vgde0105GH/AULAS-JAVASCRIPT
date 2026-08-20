@@ -1,0 +1,99 @@
+body {
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #000000;
+  text-align: center;
+  background-color: #ff0101;
+  border: 5px solid #9a0404;
+  padding: 10px;
+}
+
+h2 {
+  text-align: center;
+  background-color: #ffff00;
+  border: 3px solid #bbbb08;
+  padding: 8px;
+}
+
+/* Lista de produtos */
+ul#lista-produtos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  list-style: none;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+li {
+  width: 225px;
+  height: auto;
+  min-height: 250px;
+  border: 5px solid #000000;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #a1a1a1;
+  padding: 10px;
+  gap: 10px;
+}
+
+li img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+/* Botão de adicionar */
+li button {
+  background-color: #ff0101;
+  color: #ffffff;
+  border: 2px solid #9a0404;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+li button:hover {
+  background-color: #d00000;
+}
+
+/* Carrinho */
+aside {
+  margin-top: 30px;
+}
+
+ul#carrinho {
+  list-style: none;
+  padding: 0;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+ul#carrinho li {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  border: 2px solid #000000;
+  background-color: #e8e8e8;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 8px 12px;
+  margin-bottom: 5px;
+}
+
+ul#carrinho li:last-child {
+  font-weight: bold;
+  background-color: #ffff00;
+}
